@@ -6,6 +6,7 @@ MAINTAINER sparklyballs
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV XDG_CONFIG_HOME="/config/xdg"
 
+
 # add sonarr repository
 RUN \
  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC && \
@@ -16,7 +17,8 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	libcurl3 \
-	nzbdrone && \
+	nzbdrone \
+	cifs-utils && \
 
 # cleanup
  apt-get clean && \
