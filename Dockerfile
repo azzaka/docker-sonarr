@@ -30,9 +30,7 @@ COPY root/ /
 
 # create shared directory
 RUN \
- mkdir /shared-media \
- echo "//192.168.2.10/shared-media /shared-media cifs daefaults,uid=1000,gid=1000,rw,username=datastore,password=T0nkaTrucks,context=system_u:object_r:svirt_sandbox_file_t:s0" > /etc/fstab \
- mount -a
+ mkdir /shared-media
  
 # ports and volumes
 EXPOSE 8989
