@@ -36,4 +36,4 @@ RUN \
  
 # ports and volumes
 EXPOSE 8989
-VOLUME /config /downloads /tv
+VOLUME /config
